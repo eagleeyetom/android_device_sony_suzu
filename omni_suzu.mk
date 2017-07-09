@@ -24,6 +24,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 # kernel
 TARGET_KERNEL_CONFIG := aosp_loire_suzu_defconfig
 
+# prebuilt kernel
+TARGET_KERNEL_MODULES := true
+BOARD_KERNEL_IMAGE_NAME := kernel
+TARGET_PREBUILT_KERNEL := device/sony/suzu/kernel
+
 # Override Product Name for OmniROM
 PRODUCT_DEVICE := suzu
 PRODUCT_NAME := omni_suzu

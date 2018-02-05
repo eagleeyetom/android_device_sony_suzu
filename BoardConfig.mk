@@ -50,7 +50,7 @@ TARGET_KERNEL_MODULES := true
 # Kernel files
 #TARGET_KERNEL_CONFIG :=
 #TARGET_KERNEL_SOURCE :=
-TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilts/kernel
+TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz-dtb
 
 # Kernel configurations
 BOARD_KERNEL_BASE := 0x00000000

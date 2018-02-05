@@ -18,5 +18,5 @@
 /qns             ext4      /dev/block/bootdevice/by-name/Qnovo                         flags=display="Qnovo";backup=1;
 /ta              emmc      /dev/block/bootdevice/by-name/TA                            flags=backup=1;display="TA (Trim-Area)";
 
-/sdcard1         vfat      /dev/block/mmcblk1p1                                        flags=display="Micro SDcard";storage;wipeingui;removable;
-/usbdisk         auto      /dev/block/sda1       /dev/block/sda                        flags=display="USB OTG";storage;wipeingui;removable;
+/external_sd     auto      /dev/block/mmcblk1p1    /dev/block/mmcblk1   flags=display="Micro SDcard";storage;wipeingui;removable
+/usb-otg         auto      /dev/block/sda1         /dev/block/sda       flags=display="USB OTG";storage;wipeingui;removable                    flags=display="USB OTG";storage;wipeingui;removable;

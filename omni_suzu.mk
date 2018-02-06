@@ -14,8 +14,17 @@
 # limitations under the License.
 #
 
-# Inherit device configurations
-$(call inherit-product, device/sony/suzu/device.mk)
+# Release name
+PRODUCT_RELEASE_NAME := suzu
+
+$(call inherit-product, build/target/product/embedded.mk)
+
+# Inherit from our custom product configuration
+$(call inherit-product, vendor/omni/config/common.mk)
+
+# Time Zone data for recovery
+PRODUCT_COPY_FILES += \
+    bionic/libc/zoneinfo/tzdata:recovery/root/system/usr/share/zoneinfo/tzdata
 
 # Device identification
 PRODUCT_DEVICE := suzu
@@ -24,6 +33,3 @@ PRODUCT_RELEASE_NAME := suzu
 PRODUCT_BRAND := Sony
 PRODUCT_MANUFACTURER := Sony
 PRODUCT_MODEL := F5121
-
-# Prebuilt kernel
-LOCAL_KERNEL := device/sony/suzu/prebuilts/kernel

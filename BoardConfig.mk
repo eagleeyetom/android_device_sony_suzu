@@ -14,9 +14,6 @@
 # limitations under the License.
 #
 
-# Board device path
-DEVICE_PATH := device/sony/suzu
-
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := F5121
 
@@ -50,7 +47,7 @@ TARGET_KERNEL_MODULES := true
 # Kernel files
 #TARGET_KERNEL_CONFIG :=
 #TARGET_KERNEL_SOURCE :=
-TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz-dtb
+TARGET_PREBUILT_KERNEL := device/sony/suzu/prebuilt/Image.gz-dtb
 
 # Kernel configurations
 BOARD_KERNEL_BASE := 0x00000000
@@ -98,3 +95,7 @@ TW_INCLUDE_CRYPTO := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_NEW_ION_HEAP := true
 TW_THEME := portrait_hdpi
+
+# Workaround for error copying vendor files to recovery ramdisk
+BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
+TARGET_COPY_OUT_VENDOR := vendor

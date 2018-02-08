@@ -94,8 +94,8 @@ TW_IGNORE_ABS_MT_TRACKING_ID := true
 TW_INCLUDE_CRYPTO := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_NEW_ION_HEAP := true
-TW_THEME := portrait_hdpi
 TARGET_RECOVERY_DEVICE_MODULES := tzdata
+TW_THEME := portrait_hdpi
 
 # Workaround for error copying vendor files to recovery ramdisk
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4

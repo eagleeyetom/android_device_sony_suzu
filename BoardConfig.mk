@@ -98,6 +98,10 @@ TARGET_RECOVERY_DEVICE_MODULES := tzdata
 TW_RECOVERY_ADDITIONAL_RELINK_FILES += $(TARGET_OUT)/usr/share/zoneinfo/tzdata
 TW_THEME := portrait_hdpi
 
+# Logs
+TWRP_INCLUDE_LOGCAT := true
+TARGET_USES_LOGD := true
+
 # Workaround for error copying vendor files to recovery ramdisk
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_COPY_OUT_VENDOR := vendor

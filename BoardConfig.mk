@@ -95,6 +95,7 @@ TW_INCLUDE_CRYPTO := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_NEW_ION_HEAP := true
 TARGET_RECOVERY_DEVICE_MODULES := tzdata
+TW_RECOVERY_ADDITIONAL_RELINK_FILES += $(TARGET_OUT)/usr/share/zoneinfo/tzdata
 TW_THEME := portrait_hdpi
 
 # Workaround for error copying vendor files to recovery ramdisk
